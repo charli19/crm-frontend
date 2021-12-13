@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SecurityService {
-  private url = 'http://localhost:8080';
+  private url = 'https://eid-crm-backend.herokuapp.com';
 
   private grantType: string = 'client_credentials';
   private clientId: string = 'eid';

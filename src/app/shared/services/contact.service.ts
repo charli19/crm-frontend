@@ -7,8 +7,8 @@ import { Contact } from '../models/contact.model';
   providedIn: 'root',
 })
 export class ContactService {
-  url = 'http://localhost:8080';
-  prefix = '/api/v1/contacts/';
+  private url = 'https://eid-crm-backend.herokuapp.com';
+  private prefix = '/api/v1/contacts/';
 
   constructor(private httpClient: HttpClient) {}
 
