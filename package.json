@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build"
   },
   "engines": {
     "node": "16.13.1",
