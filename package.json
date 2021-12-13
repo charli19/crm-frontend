@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build --prod",
+    "heroku-postbuild": "node --max_old_space_size=8000"
   },
   "engines": {
     "node": "16.13.1",
