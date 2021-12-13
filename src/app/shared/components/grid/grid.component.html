@@ -1,0 +1,18 @@
+<mat-table #table [dataSource]="dataSource">
+  <ng-container *ngFor="let column of columns" [matColumnDef]="column">
+    <mat-header-cell *matHeaderCellDef="">{{ column }}</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      {{ row[column] }}
+      <mat-icon
+        (click)="delete(row['id'])"
+        style="cursor: pointer"
+        *ngIf="column == 'actions'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        >delete</mat-icon
+      >
+    </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

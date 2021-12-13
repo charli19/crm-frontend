@@ -1,0 +1,29 @@
+mat-card {
+  background-color: #f0f0f0;
+  width: 40%;
+  border: 1px solid black;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-div {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+

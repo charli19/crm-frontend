@@ -1,0 +1,28 @@
+<crm-header></crm-header>
+<div *ngIf="!isLoading" class="main-div">
+  <mat-card>
+    <mat-card-content>
+      <div class="button">
+        <button type="submit" mat-button (click)="openDialog()">
+          <mat-icon>person_add</mat-icon>
+          Add Contact
+        </button>
+      </div>
+      <hr />
+      <crm-grid
+        [dataSource]="contacts"
+        [columns]="columns"
+        [displayedColumns]="displayedColumns"
+        (deleteEmitter)="deleteContact($event)"
+      ></crm-grid>
+      <div class="pagination">
+        <crm-pagination
+          [length]="length"
+          [pageIndex]="pageIndex"
+          [pageSize]="pageSize"
+          (getDataEmitter)="pageEvent($event)"
+        ></crm-pagination>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,30 @@
+<div class="main-div">
+  <form [formGroup]="form" (ngSubmit)="closeDialog(form)">
+    <div class="label">
+      <mat-icon>person</mat-icon>
+      <h4>Create {{ data.name }}</h4>
+    </div>
+    <br />
+    <div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Name" formControlName="name" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input
+          type="text"
+          matInput
+          placeholder="Nickname"
+          formControlName="nickname"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <crm-select (selectEmitter)="this.role = $event"></crm-select>
+    </div>
+    <div class="button">
+      <button type="submit" mat-button>Create</button>
+    </div>
+  </form>
+</div>
